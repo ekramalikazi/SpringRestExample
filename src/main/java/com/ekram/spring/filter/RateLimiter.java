@@ -21,7 +21,7 @@ public class RateLimiter implements Filter {
 	
 	private static final Logger LOG = LogManager.getLogger();
 	
-	private static final int REQ_LIMIT = 4; /*number of requests that can be made in a time period*/
+	private static final int REQ_LIMIT = Integer.MAX_VALUE; /*number of requests that can be made in a time period*/
 	private static final int TIME_LIMIT = 600000; /*time duration for the rate limit after which new requests from a client can be accepted*/
 	
 	private static AccessCounter accessCounter = AccessCounter.getInstance();

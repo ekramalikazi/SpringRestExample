@@ -41,7 +41,7 @@ public class EmployeeController {
     }
 
 	@RequestMapping(value = EmpRestURIConstants.DUMMY_EMP, 
-			produces={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+			produces={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
 			method = RequestMethod.GET)
 	public ResponseEntity<Employee> getDummyEmployee() {
 		LOG.info("Start getDummyEmployee");
@@ -58,7 +58,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = EmpRestURIConstants.GET_EMP, 
-			produces={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+			produces={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
 			method = RequestMethod.GET)
 	public ResponseEntity<Employee> getEmployee(@PathVariable("id") int empId) {
 		LOG.info("Start getEmployee. ID="+empId);
@@ -75,7 +75,7 @@ public class EmployeeController {
 
 	//TODO: need to revisit
 	@RequestMapping(value = EmpRestURIConstants.GET_ALL_EMP, 
-			produces={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+			produces={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
 			method = RequestMethod.GET)
 	public ResponseEntity<List<Employee>> getAllEmployees() {
 		LOG.info("Start getAllEmployees.");
@@ -88,7 +88,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = EmpRestURIConstants.CREATE_EMP,
-			produces={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+			produces={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
 			method = RequestMethod.POST)
 	public ResponseEntity<Employee> createEmployee(@RequestBody @Valid Employee emp) {
 		LOG.info("Start createEmployee.");
@@ -106,7 +106,7 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value = EmpRestURIConstants.DELETE_EMP, 
-			produces={MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE},
+			produces={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
 			method = RequestMethod.PUT)
 	public @ResponseBody Employee deleteEmployee(@PathVariable("id") int empId) {
 		LOG.info("Start deleteEmployee.");

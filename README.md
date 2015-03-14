@@ -11,7 +11,7 @@ modify to log4j2  - done 2/22
 separate service layer - done 2/22
 logging  - done 2/22
 rate limiting - done 2/22
-
+basic security - done 3/13
 
 TODO: 
 -----
